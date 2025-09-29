@@ -38,6 +38,7 @@ public class SecurityConfig {
                         .requestMatchers("/api/auth/**").permitAll()
                         .requestMatchers("/api/simulation/**").permitAll()
                         .requestMatchers("/api/news/**").permitAll()
+                        .requestMatchers("/api/gemini/**").permitAll()
 
                         // 보호 API
                         .requestMatchers("/api/history/**").authenticated()

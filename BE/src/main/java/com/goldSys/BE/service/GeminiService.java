@@ -34,7 +34,7 @@ public class GeminiService {
         String prompt = buildPrompt(simulationResult);
 
         try (VertexAI vertexAI = new VertexAI(this.projectId, this.location)) {
-            GenerativeModel model = new GenerativeModel("gemini-1.5-pro-preview-0409", vertexAI);
+            GenerativeModel model = new GenerativeModel("gemini-pro", vertexAI);
             GenerateContentResponse response = model.generateContent(prompt);
             return ResponseHandler.getText(response);
         } catch (IOException e) {
